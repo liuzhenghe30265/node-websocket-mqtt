@@ -80,4 +80,76 @@ node ws.js
 </html>
 ```
 
+## mqtt
+
+```
+yarn add mqtt mosca
+```
+
+server.js
+
+```
+
+```
+
+```bash
+node server.js
+```
+
+报错
+
+```
+D:\WorkSpaces\o\node-websocket-mqtt\node_modules\jsonschema\lib\validator.js:110
+    throw new SchemaError('Expected `schema` to be an object or boolean');
+```
+
+打开文件
+
+```
+node_modules\jsonschema\lib\validator.js
+```
+
+注释掉
+
+```
+  if((typeof schema !== 'boolean' && typeof schema !== 'object') || schema === null){
+    throw new SchemaError('Expected `schema` to be an object or boolean');
+  }
+```
+
+开启订阅
+
+subclient.js
+
+```
+
+```
+
+```bash
+node subclient.js
+```
+
+发布订阅
+
+pubclient.js
+
+```
+
+```
+
+```bash
+node pubclient.js
+```
+
+报错
+```
+Uncaught TypeError: net.createConnection is not a function
+    at Object.streamBuilder (mqtt.js:1736)
+    at MqttClient.wrapper [as streamBuilder] (mqtt.js:2525)
+    at MqttClient._setupStream (mqtt.js:300)
+    at new MqttClient (mqtt.js:279)
+    at Function.connect (mqtt.js:2527)
+    at index.html:15
+```
+
 [Github](https://github.com/liuzhenghe30265/node-websocket-mqtt.git)
