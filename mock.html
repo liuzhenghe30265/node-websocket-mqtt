@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.1-beta3/mock-min.js"></script>
+  <script>
+    var newsJson = Mock.mock({
+      'data|20': [{
+        'lng|115.7-117.4': 117.209816,
+        'lat|39.4-41.6': 39.090207
+      }]
+    })
+    console.log(newsJson)
+    let position = []
+    newsJson.data.forEach(element => {
+      position.push({
+        longitude: element['lng.4'],
+        latitude: element['lat.6']
+      })
+    })
+    console.log(position)
+  </script>
+</body>
+
+</html>

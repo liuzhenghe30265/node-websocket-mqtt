@@ -23,7 +23,7 @@
         console.log('连接出错')
       }
       ws.onmessage = function (e) {
-        console.log(e)
+        console.log(JSON.parse(e.data))
       }
     }
   </script>
